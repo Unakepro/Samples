@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Enter new category:</h1>
+    <form action="/admin" method="post">
+        <input name="cat" value="cat" style="display: none">
+        <input type="text" name="category" placeholder=""><br>
+        <p><input type="submit"></p>
+    </form>
+
+    <h1>Enter new product:</h1>
+    <form action="/admin" method="post">
+        <input placeholder="Enter product name" type="text" name="product"><br>
+        <br>
+        <select name="category_add">
+        {% for category in category %}
+        <option value="{{category}}">{{category}}</option>
+        {% endfor %}
+        </select>
+        <br><br>
+
+        <select name="valuable">
+            <option value="in stock">In stock</option>
+            <option value="on sale">On sale</option>
+        </select>
+
+        <br><br>
+        <input type="number" name="price" placeholder="Price">
+        <br>
+
+        <br>
+        <input type="number" name="quantity" placeholder="Quantity">
+        <br>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>

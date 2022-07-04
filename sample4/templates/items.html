@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+{% for product in products%}
+    {% if title in product %}
+        <h3>{{product[2]}}</h3>
+        <h3>{{product[3]}}</h3>
+        <h3>{{product[4]}}</h3>
+    {% endif %}
+{% endfor %}
+</body>
+</html>
